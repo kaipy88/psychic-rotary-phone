@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>賴育生 - 美麗兒 MILARE 數位名片</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card-container {
+            background: linear-gradient(135deg, #f0f0f0, #ffffff); /* Subtle gradient */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Softer shadow */
+            padding: 30px;
+            max-width: 450px; /* Slightly wider for better readability */
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e0e0e0; /* Light border */
+            animation: fadeIn 0.8s ease-out; /* Fade-in animation */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .logo-text {
+            font-size: 2.5rem; /* Larger logo text */
+            font-weight: 700;
+            color: #b8860b; /* Gold-like color for MILARE */
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 30px; /* More space below subtitle */
+            font-weight: 600;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center align items */
+            margin-bottom: 18px; /* More spacing between info items */
+            color: #333;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .info-item svg {
+            margin-right: 15px; /* More space for icons */
+            color: #b8860b; /* Gold icon color */
+            width: 24px;
+            height: 24px;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 15px; /* Spacing between buttons */
+            margin-top: 30px;
+        }
+        .contact-button {
+            background-color: #b8860b; /* Gold button */
+            color: white;
+            padding: 14px 25px; /* Larger padding */
+            border-radius: 12px; /* More rounded */
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(184, 134, 11, 0.3); /* Button shadow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-button:hover {
+            background-color: #a07a0a; /* Darker gold on hover */
+            transform: translateY(-3px); /* Lift effect */
+            box-shadow: 0 6px 15px rgba(184, 134, 11, 0.4);
+        }
+        .contact-button svg {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        .copy-message {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .copy-message.show {
+            opacity: 1;
+        }
+        @media (max-width: 480px) {
+            .card-container {
+                padding: 20px;
+            }
+            .logo-text {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            .info-item {
+                font-size: 0.95rem;
+            }
+            .contact-button {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Company Logo/Name -->
+        <div class="logo-text">MILARE</div>
+        <div class="subtitle">COSMETICS 美麗兒</div>
+
+        <!-- Name -->
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">賴育生</h1>
+
+        <!-- Contact Information -->
+        <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+            <span>業務經理</span> <!-- Adding a generic title -->
+        </div>
+
+        <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3.75m3-2.25V3.75M3.75 6.75h16.5M3.75 9.75h16.5M3.75 12.75h16.5M3.75 15.75h16.5M3.75 18.75h16.5" />
+            </svg>
+            <a href="tel:+886982334611" class="text-blue-600 hover:underline">0982334611</a>
+        </div>
+
+        <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+            <span>台中市黎明路二段302號5樓之6</span>
+        </div>
+
+        <!-- Interactive Buttons -->
+        <div class="contact-buttons">
+            <button id="callButton" class="contact-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.391c0-.414-.24-1.076-.812-1.264l-1.458-.364a1.125 1.125 0 00-1.082.358l-2.906 2.906c-2.877-1.16-5.684-3.413-8.406-6.135L5.122 8.923a1.125 1.125 0 00-.358-1.082L4.363 7.03c-.192-.572-.854-.812-1.264-.812H2.25z" />
+                </svg>
+                撥打電話
+            </button>
+            <button id="copyPhoneButton" class="contact-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75m10.5 0h.008v.008h-.008zm1.5 1.5h.008v.008h-.008zm-1.5 1.5h.008v.008h-.008zM12 6H7.5a2.25 2.25 0 00-2.25 2.25v10.5a2.25 2.25 0 002.25 2.25h10.5A2.25 2.25 0 0021 18.75V13.5m-15-6.75h-3A2.25 2.25 0 001.5 9v1.5m18-9h-3A2.25 2.25 0 0118 4.5v1.5m-3-1.5V6m2.25-1.5H21A2.25 2.25 0 0122.5 4.5v1.5m-3-1.5V6m-1.5-1.5h-3A2.25 2.25 0 0015 3h-1.5m-1.5-1.5V3" />
+                </svg>
+                複製電話號碼
+            </button>
+            <button id="copyAddressButton" class="contact-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75m10.5 0h.008v.008h-.008zm1.5 1.5h.008v.008h-.008zm-1.5 1.5h.008v.008h-.008zM12 6H7.5a2.25 2.25 0 00-2.25 2.25v10.5a2.25 2.25 0 002.25 2.25h10.5A2.25 2.25 0 0021 18.75V13.5m-15-6.75h-3A2.25 2.25 0 001.5 9v1.5m18-9h-3A2.25 2.25 0 0118 4.5v1.5m-3-1.5V6m2.25-1.5H21A2.25 2.25 0 0122.5 4.5v1.5m-3-1.5V6m-1.5-1.5h-3A2.25 2.25 0 0015 3h-1.5m-1.5-1.5V3" />
+                </svg>
+                複製地址
+            </button>
+        </div>
+        <p id="copyMessage" class="copy-message">已複製到剪貼簿！</p>
+    </div>
+
+    <script>
+        document.getElementById('callButton').addEventListener('click', function() {
+            // Directly navigate to tel: link
+            window.location.href = 'tel:+886982334611';
+        });
+
+        document.getElementById('copyPhoneButton').addEventListener('click', function() {
+            const phoneNumber = '0982334611';
+            copyToClipboard(phoneNumber);
+            showMessage();
+        });
+
+        document.getElementById('copyAddressButton').addEventListener('click', function() {
+            const address = '台中市黎明路二段302號5樓之6';
